@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\Cast\Array_;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+       // $this->middleware('auth');
     }
 
     /**
@@ -24,6 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        /*$ary = array("1","2","3");
+        for($i=0;$i<count($ary);$i++)
+        {
+            $tt=$ary[$i];
+        }*/
+        //throw new \Exception("我故意的", 1);
+       // $ids = $_GET['id'];
+        return view('home')->withArticless(\App\Article::all());
     }
+
 }
