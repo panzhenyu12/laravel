@@ -8,7 +8,7 @@
                     <div class="panel-heading">Dashboard</div>
 
                     <div class="panel-body">
-
+                        {{Auth::user()->email}}
                         <a href="{{ url('admin/article') }}" class="btn btn-lg btn-success col-xs-12">管理文章</a>
 
                     </div>

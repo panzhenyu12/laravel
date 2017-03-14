@@ -32,10 +32,12 @@
                                 <button type="submit" class="btn btn-danger">删除</button>
                             </form>
                         @endforeach
-
                     </div>
+
                 </div>
+                {!! $articles->fragment('foo')->links() !!}
             </div>
         </div>
     </div>
+
 @endsection
